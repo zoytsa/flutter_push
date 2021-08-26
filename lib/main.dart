@@ -37,13 +37,13 @@ class MyHomePageState extends State<MyHomePage> {
       body: Stack(
         children: [
           Align(
-            alignment: const Alignment(0, -0.9),
+            alignment: const Alignment(0, -0.8),
             child: Text(
               "Test your\nreaction speed",
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 38,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w900,
                   color: Colors.white),
             ),
           ),
@@ -60,7 +60,7 @@ class MyHomePageState extends State<MyHomePage> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         fontSize: 36,
-                        fontWeight: FontWeight.normal,
+                        fontWeight: FontWeight.w500,
                         color: Colors.white),
                   ),
                 ),
@@ -68,7 +68,7 @@ class MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Align(
-            alignment: const Alignment(0, 0.9),
+            alignment: const Alignment(0, 0.8),
             child: GestureDetector(
               onTap: () => setState(() {
                 switch (gameState) {
@@ -86,7 +86,7 @@ class MyHomePageState extends State<MyHomePage> {
                 }
               }),
               child: ColoredBox(
-                color: Colors.black12,
+                color: Color(getButtonColor()),
                 child: SizedBox(
                   height: 200,
                   width: 200,
@@ -94,9 +94,10 @@ class MyHomePageState extends State<MyHomePage> {
                     child: Text(
                       getButtonText(),
                       style: TextStyle(
-                          fontSize: 38,
-                          fontWeight: FontWeight.bold,
-                          color: Color(getButtonColor())),
+                        fontSize: 38,
+                        fontWeight: FontWeight.w900,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
